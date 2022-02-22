@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY EVENTS</title>
+</head>
+<body>
+
+<h1>vijit rawal</h1>
+<p id="demo">hey!</p>
+
+<button>click!</button>
+<input type="text">
+
+<script src="jquery-3.6.0.min.js">
+</script>
+<script>
+    // Event -click
+    // $(document).ready(function(){
+    //     $("button").click(function(){
+    //         $("h1").hide();
+    //     });
+    // });
+    
+    //Event-dblclick
+    // $(document).ready(function(){
+    //     $("button").dblclick(function(){
+    //         $("h1").hide();
+    //     });
+    // });
+
+    //Event-mouseenter-The function is executed when the mouse pointer enters the HTML element:
+    // $(document).ready(function(){
+    //     $("button").mouseenter(function(){
+    //         $("h1").hide();
+    //     });
+    // });
+
+    //Event-mouseleave-The function is executed when the mouse pointer leaves the HTML element:
+    // $(document).ready(function(){
+    //     $("button").mouseleave(function(){
+    //         $("h1").hide();
+    //     });
+    // });
+
+
+    //Event-mousedown-The function is executed, when the left, middle or right mouse button is pressed down, while the mouse is over the HTML element:
+    // $(document).ready(function(){
+    //     $("button").mousedown(function(){
+    //         $("h1").hide();
+    //     })
+    // })
+
+    //Event-mouseup-The function is executed, when the left, middle or right mouse button is released, while the mouse is over the HTML element:
+    $(document).ready(function(){
+        $("#demo").mouseup(function(){
+            $("h1").hide();
+        })
+    })
+
+    //Event-hover
+    // $("#demo").hover(function(){
+    //     alert("Hey!");
+    // })
+
+    //Event-focus()
+//     $("input").focus(function(){
+//   $(this).css("background-color", "red");
+// });
+//Event-blur()
+$("input").blur(function(){
+    $(this).css("background-color","green");
+})
+
+//Event-On()-he on() method attaches one or more event handlers for the selected elements.
+// $("p").on("click",function(){
+//     $(this).hide();
+// })
+
+//Multiple Events
+$("p").on({
+  mouseenter: function(){
+    $(this).css("background-color", "lightgray");
+  },
+  mouseleave: function(){
+    $(this).css("background-color", "lightblue");
+  },
+  click: function(){
+    $(this).css("background-color", "yellow");
+  }
+});
+
+$(document).ready(function(){
+  $("div").scroll(function(){
+    $("span").text( x+= 1);
+  });
+});
+
+</script>
+</body>
+</html>
