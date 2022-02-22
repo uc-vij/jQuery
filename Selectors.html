@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    // Selector -P
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $("p").hide();
+//   });
+// });
+
+// Selector -Id
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $("#demo").hide();
+//   });
+// });
+
+// //Selector- Class
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $(".para").hide();
+//   });
+// });
+
+//Selector- *
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $("*").hide();
+//   });
+// });
+
+//Selector=this
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $(this).hide();
+//   });
+// });
+
+//Selector- Element.className-
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $("p.para").hide();
+//   });
+// });
+
+//Selector-elementname:first=	Selects the first of  element
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $("p:first").hide();
+//   });
+// });
+
+//Selector-ul li:first-Selects the first elemnt of ul li
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $("ul li:first").hide();
+//   });
+// });
+
+// Selector-ul li:first-child-Selects first li of every ul
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $("ul li:first-child").hide();
+//   });
+// });
+
+//Selector-[href]-Selects all elements of href attibute
+$(document).ready(function(){
+  $("button").click(function(){
+    $("[href]").hide();
+  });
+});
+
+
+</script>
+</head>
+<body>
+
+<h2 id="demo">This is a heading</h2>
+
+<p class="para">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me to hide paragraphs</button>
+<!-- <button id="second">Click me to hide paragraphs</button> -->
+
+
+<ul>
+  <li>vijit</li>
+  <li>vijit</li>
+  <li>vijit</li>
+  <li>vijit</li>
+  <li>vijit</li>
+</ul>
+
+<ul id="other">
+  <li>vijit</li>
+  <li>vijit</li>
+  <li>vijit</li>
+  <li>vijit</li>
+  <li>vijit</li>
+</ul>
+
+<a href="http://" target="_blank" rel="noopener noreferrer">vijit</a>
+
+</body>
+</html>
