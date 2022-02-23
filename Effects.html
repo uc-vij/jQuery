@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY Effects</title>
+</head>
+<body>
+    <h1>Hide/Show</h1>
+    <h1 id="heading">VIJIT RAWAL</h1>
+    <button id="demo">click!</button>
+    <button id="clicked">submit</button>
+    <br>
+    <br>
+    <h1>toggle</h1>
+    <p id="other">lorem</p>
+    <button id="click">first</button>
+    <br>
+    <br>
+    <h1>fadeIn</h1>
+    <div id="second" style="display:none;">vijit rawal</div>
+    <button id="btn">click</button>
+    <br>
+    <br>
+    <br>
+    <h1>fadeOut</h1>
+    <div id="third">VIJIT RAWAL</div>
+    <button id="press">CLICK!</button>
+    <br>
+    <br>
+    <h1>fadeTo</h1>
+    <div id="fourth">ucerotfy</div>
+    <button id="fadeTo">click</button>
+    <br>
+    <br>
+    <h1>fadeToggle</h1>
+    <div id="fifth">Lenovo</div>
+    <button id="fadeToggle">Click</button>
+    <br>
+    <br>
+    <h1>slideDown</h1>
+    <button id="sixth">CLICK Silde DownE</button>
+    <p id="para" style="border:1px solid #000000;display: none;">lorem</p>
+    <br>
+    <br>
+    <h1>slideUp</h1>
+    <button id="slideup">CLICK Silde up</button>
+    <br>
+    <br>
+    <br>
+    <h1>animate</h1>
+    <div id="seventh" style="border:1px solid #000000;position:relative;">vijit</div>
+    <button id="animate">Click!</button>
+    <br>
+    <br>
+    <br>
+    <h1>Multiple Proeprty Animation</h1>
+    <div id="eigth" style="position: relative;">ANIMATION WITH MLTIPLE PROERTIES</div>
+    <button id="multiple">click</button>
+    <br>
+    <br>
+    <br>
+    <h1>Animate Using Realtive Value</h1>
+    <div id="ninth" style="border: 1px solid #000000;">Relative Values</div>
+    <button id="relative">CLick</button>
+    <br>
+    <br>
+    <br>
+    <h1>CallBack Function</h1>
+    <div id="tenth" style="border:1px solid #000000;">THIS IS CALLBACK FUNCTIONS</div>
+    <button id="callback">click</button>
+    <br>
+    <br>
+    <br>
+    <h1>Chanining</h1>
+    <p id="paragraph">lorem ipsum</p>
+    <button id="chaining">Click</button>
+
+
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    //Effect-Hide();
+$(document).ready(function(){
+    $("#demo").click(function(){
+        $("#heading").hide(3000);
+    })
+})
+
+//Effect-Show()
+$(document).ready(function(){
+    $("#clicked").click(function(){
+        $("#heading").show(3000);
+    })
+})
+//Effect-toggle()
+$(document).ready(function(){
+    $("#click").click(function(){
+        $("#other").toggle();
+    })
+})
+
+//Effect-fadeIn()
+$(document).ready(function(){
+$("#btn").click(function(){
+    $("#second").fadeIn(3000);
+    });
+});
+
+//Effect=fadeOut()
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#third").fadeOut(3000);
+    });
+});
+
+//Effect-fadeTo()
+$(document).ready(function(){
+    $("#fadeTo").click(function(){
+        $("#fourth").fadeTo(1000,0.5);
+    })
+})
+
+//Effect-fadeToggle()
+$(document).ready(function(){
+    $("#fadeToggle").mouseover(function(){
+        $("#fifth").fadeToggle();
+    })
+})
+
+//Effect-slideDown()
+$(document).ready(function(){
+$("#sixth").click(function(){
+    $("#para").slideDown("slow");
+})
+})
+
+//Effect-slideUp()
+$(document).ready(function(){
+    $("#slideup").click(function(){
+        $("#para").slideUp();
+    })
+})
+
+//Effect-animate()
+$(document).ready(function(){
+    $("#animate").click(function(){
+        $("#seventh").animate({left: '250px'});
+    });
+});
+
+//Effect -animate(multiple proeprties)
+$("#multiple").click(function(){
+    $("#eigth").animate({
+        opacity: '0.6',
+        left: '150px',
+        border: '1px solid #000000'
+    })
+})
+
+//Effect-animate(Relative values)
+$("#relative").click(function(){
+    $("#ninth").animate({
+        height: '+=150px',
+        width: '-=150px'
+    })
+})
+
+//Effect-Callback Functions
+$("#callback").click(function(){
+    $("#tenth").hide(function(){
+        alert("DIV IS HIDDEN NOW");
+    })
+})
+
+//Effect-Chaining
+$("#chaining").click(function(){
+    $("#paragraph").css("color","red").fadeOut(2000).fadeIn(4000);
+})
+
+
+
+</script>
+    
+</body>
+</html>
