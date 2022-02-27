@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Traversing</title>
+</head>
+<body>
+    <h1>Parent</h1>
+    <div style="width:500px;">div (great-grandparent)
+        <ul>ul (grandparent)  
+          <li>li (direct parent)
+            <span>span</span>
+          </li>
+        </ul>   
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="descendants" style="width:500px;">div (current element) 
+        <p>p (child)
+          <span>span (grandchild)</span>   
+        </p>
+        <p>p (child)
+          <span>span (grandchild)</span>
+        </p> 
+      </div>
+      <br>
+      <br>
+      <br>
+      <div>div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+      </div>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+//     $(document).ready(function(){
+//   $("span").parents().css({"color": "red", "border": "2px solid red"});
+// });
+
+// $(document).ready(function(){
+//   $("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"});
+// });
+$(document).ready(function(){
+  $("div").children().css({"color": "red", "border": "2px solid red"});
+});
+
+$(document).ready(function(){
+  $("div").find("span").css({"color": "red", "border": "2px solid red"});
+});
+
+$(document).ready(function(){
+  $("h2").next().css({"color": "red", "border": "2px solid red"});
+});
+
+</script>
+    
+</body>
+</html>

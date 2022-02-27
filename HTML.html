@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY HTML</title>
+</head>
+<body>
+    <div id="first">VIJIT RAWAL</div>
+    <button id="btn1">Click</button>
+    <br>
+    <br>
+    <h1>get html</h1>
+    <div id="second"><i>uCertify</i></div>
+    <button id="btn2">Click</button>
+    <br>
+    <br>
+    <br>
+    <h1>get val</h1>
+    <input type="text" name="third" id="third" value="vijit">
+    <button id="btn3">click</button>
+    <br>
+    <br>
+    <br>
+    <h1>Set Text/HTML/VAL</h1>
+    <div id="fourth">VIJIT</div>
+    <p id="para">lorem</p>
+    <input type="text" id="inp">
+
+    <button id="btn4">CLick</button>
+
+    <br>
+    <br>
+    <br>
+    <h1>Callback in Text/html/val</h1>
+    <div id="fifth"></div>
+    <button id="btn5">Click</button>
+    <br>
+    <br>
+    <br>
+
+    <p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="btn6">Append text</button>
+<button id="btn7">Append list items</button>
+<br>
+<br>
+<br>
+<h1>Remove Elements</h1>
+<div id="div8">lorem ipusm s back</div>
+<button id="btn8">click</button>
+
+
+
+    
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+$("#btn1").click(function(){
+    alert("STUDENT NAME IS "+$("#first").text());
+})
+
+$("#btn2").click(function(){
+    alert("COMpANY NAME IS "+$("#second").html());
+})
+
+$("#btn3").click(function(){
+    alert("FORM VALUE IS "+$("#third").val());
+})
+
+$("#btn4").click(function(){
+    $("#fourth").text("uCERTIFy");
+    $("#inp").val("mickey mouse");
+    $("#para").html("<b>VIJIT</b>");
+})
+
+$("#btn5").click(function(){
+    $("#fifth").text(function(i,origtext){
+        return "DIV TEXT IS "+"Hello World";
+    });
+});
+
+$(document).ready(function(){
+  $("#btn6").click(function(){
+    $("p").append(" <b>Appended text</b>.");
+  });
+
+  $("#btn7").click(function(){
+    $("ol").append("<li>Appended item</li>");
+  });
+});
+
+$(document).ready(function(){
+  $("#btn8").click(function(){
+    $("#div8").remove();
+  });
+});
+</script>
+</body>
+</html>
